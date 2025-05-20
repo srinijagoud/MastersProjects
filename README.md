@@ -14,7 +14,7 @@ There are many automobile companies aspires to enter the US market by setting up
 
 
 
-**Cloud Compluting Project** - DevOps, CloudOps, AI, CI/CD, Cloud storage of IBM cloud features, hands-on, presentation.
+**Cloud Computing Project** - DevOps, CloudOps, AI, CI/CD, Cloud storage of IBM cloud features, hands-on, presentation.
 
 
 **Machine Learning Project** - Worked on three projects of different datasets with Data Loading and Exploration, Data Preprocessing, Encoding, Dimensionality Reduction for Segmentation with different visualizations:
