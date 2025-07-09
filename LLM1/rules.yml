@@ -1,0 +1,86 @@
+version: "3.1"
+
+rules:
+  - rule: Greet user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Create customer account
+    steps:
+      - intent: create_account
+      - action: action_create_account
+
+  - rule: Update account info
+    steps:
+      - intent: update_account
+      - action: action_update_account
+
+  - rule: Pay monthly bill
+    steps:
+      - intent: pay_bill
+      - action: action_pay_bill
+
+  - rule: Create order
+    steps:
+      - intent: create_order
+      - action: action_create_order
+
+  - rule: Cancel order
+    steps:
+      - intent: cancel_order
+      - action: action_cancel_order
+
+  - rule: Create support ticket
+    steps:
+      - intent: create_ticket
+      - action: action_create_ticket
+
+  - rule: Assign ticket
+    steps:
+      - intent: assign_ticket
+      - action: action_assign_ticket
+
+  - rule: Schedule ticket
+    steps:
+      - intent: schedule_ticket
+      - action: action_schedule_ticket
+
+  - rule: Close ticket
+    steps:
+      - intent: close_ticket
+      - action: action_close_ticket
+
+  - rule: Cancel ticket
+    steps:
+      - intent: cancel_ticket
+      - action: action_cancel_ticket
+
+  - rule: Require TV plan for PPV services
+    condition:
+    - slot_was_set:
+      - product_type: PPV
+    steps:
+      - intent: create_order
+      - action: action_check_tv_plan
+      - action: utter_no_tv_plan
+
+  - rule: Require Smarthub Box for new customers
+    condition:
+    - slot_was_set:
+      - role: Customer
+    steps:
+      - intent: create_account
+      - action: action_check_smarthub
+      - action: utter_require_smarthub
+ 
+  - rule: Authenticate user before any action
+    steps:
+      - intent: check_contract_benefits
+      - action: action_authenticate_user
+      - rule: Authenticate user before any action

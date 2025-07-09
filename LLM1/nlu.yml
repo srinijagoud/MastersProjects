@@ -1,0 +1,102 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - Hello
+      - Hi there
+      - Hey
+      - Good morning
+
+  - intent: goodbye
+    examples: |
+      - Bye
+      - Goodbye
+      - See you later
+
+  - intent: create_account
+    examples: |
+      - I want to create a new account
+      - Can you register me?
+      - Sign me up
+
+  - intent: update_account
+    examples: |
+      - I need to update my personal info
+      - Change my credit card details
+      - Edit my account
+
+  - intent: pay_bill
+    examples: |
+      - I want to pay my monthly bill
+      - Pay my bill
+      - Make a payment
+
+  - intent: create_order
+    examples: |
+      - I want to order [Ultimate TV](plan_type) plan
+      - Subscribe to [Premium](service_type) movies
+
+  - intent: update_order
+    examples: |
+      - I want to change my [Data](plan_type) plan
+      - Modify my current order
+
+  - intent: cancel_order
+    examples: |
+      - Cancel my subscription
+      - Stop my [PPV](service_type) service
+      - Update my TV plan to BasicPlus
+      - Modify my order ORD67890
+
+  - intent: create_ticket
+    examples: |
+      - I want to report an issue
+      - Raise a support ticket
+
+  - intent: assign_ticket
+    examples: |
+      - Assign this ticket to a technician
+      - Give incident INC456 to a support specialist
+
+  - intent: schedule_ticket
+    examples: |
+      - Schedule the repair visit
+      - Schedule ticket INC456 for tomorrow
+
+  - intent: close_ticket
+    examples: |
+      - Close the support ticket
+
+  - intent: cancel_ticket
+    examples: |
+      - Cancel the support ticket
+
+  - intent: add_product
+    examples: |
+      - Add a new [WiFi LightLane](plan_type) service
+      - Introduce a new movie streaming plan
+
+  - intent: update_product
+    examples: |
+      - Update the [Online TV](service_type) offerings
+      - Change the WiFi SpeedLane to 150 Mbps
+      - Modify the Premium Movie plan
+
+  - intent: delete_product
+    examples: |
+      - Remove the [Premium Movies](service_type)
+      - Drop the Premium Video Games plan
+
+  - intent: select_plan
+    examples: |
+      - I want a 2 year contract_duration [bundle](plan_type) contract
+
+  - intent: inquire_offer
+    examples: |
+      - What do I get with a 1 year contract?
+
+  - intent: rent_device
+    examples: |
+      - Rent the SmartHub box
+      - I need the required devices

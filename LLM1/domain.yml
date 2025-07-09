@@ -1,0 +1,97 @@
+version: "3.1"
+
+domain:
+  intents:
+    - greet
+    - goodbye
+    - create_account
+    - update_account
+    - pay_bill
+    - create_order
+    - update_order
+    - cancel_order
+    - create_ticket
+    - assign_ticket
+    - schedule_ticket
+    - close_ticket
+    - cancel_ticket
+    - add_product
+    - update_product
+    - delete_product
+    - select_plan
+    - inquire_offer
+    - control_device
+
+  entities:
+    - plan_type
+    - contract_duration
+    - service_type
+    - user_role
+    - order_id
+    - ticket_id
+    - account_id
+    - device_type
+    - payment_method
+
+  slots:
+    plan_type:
+      type: text
+    contract_duration:
+      type: text
+    service_type:
+      type: text
+    user_role:
+      type: text
+    account_id:
+      type: text
+    order_id:
+      type: text
+    ticket_id:
+      type: text
+    payment_status:
+      type: text
+
+  responses:
+    utter_greet:
+      - text: "Hello! How can I assist you today?"
+
+    utter_goodbye:
+      - text: "Goodbye! Have a great day."
+
+    utter_confirm_order:
+      - text: "Your order has been placed successfully."
+
+    utter_payment_success:
+      - text: "Your payment was successful."
+
+    utter_error:
+      - text: "I'm sorry, something went wrong. Please try again."
+    
+    utter_no_tv_plan:
+      - text: "Sorry, you need an active Online TV plan to order PPV services. Would you like to add a TV plan?"
+
+    utter_require_smarthub:
+      - text: "New customers must rent the WideCast Smarthub Box. Would you like to include it in your order?"
+
+    utter_auth_failed:
+      - text: "Authentication failed. Please provide valid credentials."
+
+  actions:
+    - action_authenticate_user
+    - action_create_account
+    - action_update_account
+    - action_pay_bill
+    - action_create_order
+    - action_update_order
+    - action_cancel_order
+    - action_create_ticket
+    - action_assign_ticket
+    - action_schedule_ticket
+    - action_close_ticket
+    - action_cancel_ticket
+    - action_check_tv_plan
+    - action_check_smarthub
+    - action_add_product
+    - action_update_product
+    - action_delete_product
+    - action_apply_contract_offers

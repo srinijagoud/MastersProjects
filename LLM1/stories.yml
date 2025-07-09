@@ -1,0 +1,54 @@
+version: "3.1"
+
+stories:
+
+  - story: Customer orders a service
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: create_order
+      - action: action_create_order
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Support creates ticket
+    steps:
+      - intent: create_ticket
+      - action: action_create_ticket
+      - intent: assign_ticket
+      - action: action_assign_ticket
+      - intent: schedule_ticket
+      - action: action_schedule_ticket
+
+  - story: Manager adds a new product
+    steps:
+      - intent: add_product
+      - action: action_authenticate_user
+      - slot_was_set:
+        - auth_status: true
+        - role: Manager
+      - action: action_add_product
+      - action: utter_product_added
+
+  - story: Manager updates product
+    steps:
+      - intent: update_product
+      - action: action_update_product
+      - intent: delete_product
+      - action: action_delete_product
+
+  - story: Customer pays bill
+    steps:
+      - intent: pay_bill
+      - action: action_pay_bill
+
+  - story: Customer updates info and cancels order
+    steps:
+      - intent: update_account
+      - action: action_authenticate_user
+      - slot_was_set:
+        - auth_status: true
+        - role: Manager
+      - action: action_update_account
+      - intent: cancel_order
+      - action: action_cancel_order
